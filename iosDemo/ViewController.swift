@@ -13,12 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let client = Hello_HelloServiceServiceClient(address: ":8833", secure: false)
-        var req = Hello_HelloRequest()
-        req.greeting = "JayL"
+        let client = Helloworld_GreeterServiceClient(address: ":50051", secure: false)
+        var req = Helloworld_HelloRequest()
+        req.name = "JayL"
         do {
             let resp = try client.sayHello(req)
-            print("resp: \(resp.reply)")
+            print("resp: \(resp.message)")
         } catch {
             print("error: \(error.localizedDescription)")
         }
