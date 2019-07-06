@@ -1,0 +1,8 @@
+framework module "Golib" {
+	header "ref.h"
+    header "Golib.objc.h"
+    header "Universe.objc.h"
+    header "Golib.h"
+
+    export *
+}

@@ -7,5 +7,4 @@ target 'iosDemo' do
 
   # Pods for iosDemo
   pod 'SwiftGRPC'
-
 end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		69798C0222CC4A9400EB4E42 /* hello.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69798C0022CC4A9400EB4E42 /* hello.grpc.swift */; };
 		69798C0322CC4A9400EB4E42 /* hello.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69798C0122CC4A9400EB4E42 /* hello.pb.swift */; };
+		69A20ADF22CF43220096CCC8 /* Golib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A20ADE22CF43220096CCC8 /* Golib.framework */; };
 		69CA0DED22CBA20700B748E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CA0DEC22CBA20700B748E0 /* AppDelegate.swift */; };
 		69CA0DEF22CBA20700B748E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CA0DEE22CBA20700B748E0 /* ViewController.swift */; };
 		69CA0DF222CBA20700B748E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69CA0DF022CBA20700B748E0 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		4C29E8AFBD375BD2780ABCD9 /* Pods-iosDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosDemo.release.xcconfig"; path = "Target Support Files/Pods-iosDemo/Pods-iosDemo.release.xcconfig"; sourceTree = "<group>"; };
 		69798C0022CC4A9400EB4E42 /* hello.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hello.grpc.swift; sourceTree = "<group>"; };
 		69798C0122CC4A9400EB4E42 /* hello.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hello.pb.swift; sourceTree = "<group>"; };
+		69A20ADE22CF43220096CCC8 /* Golib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Golib.framework; sourceTree = "<group>"; };
 		69CA0DE922CBA20700B748E0 /* iosDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69CA0DEC22CBA20700B748E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69CA0DEE22CBA20700B748E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A20ADF22CF43220096CCC8 /* Golib.framework in Frameworks */,
 				9A57395F8D897A708F2DCFC3 /* Pods_iosDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +97,7 @@
 		69CA0DE022CBA20700B748E0 = {
 			isa = PBXGroup;
 			children = (
+				69A20ADE22CF43220096CCC8 /* Golib.framework */,
 				69CA0DEB22CBA20700B748E0 /* iosDemo */,
 				69CA0E0022CBA20800B748E0 /* iosDemoTests */,
 				69CA0E0B22CBA20800B748E0 /* iosDemoUITests */,
@@ -225,6 +229,7 @@
 				TargetAttributes = {
 					69CA0DE822CBA20700B748E0 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					69CA0DFC22CBA20800B748E0 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -509,7 +514,14 @@
 			baseConfigurationReference = E29842C6C16B48E963389D49 /* Pods-iosDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iosDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,6 +529,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GitDiG.iosDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -527,7 +542,14 @@
 			baseConfigurationReference = 4C29E8AFBD375BD2780ABCD9 /* Pods-iosDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iosDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -535,6 +557,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GitDiG.iosDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
